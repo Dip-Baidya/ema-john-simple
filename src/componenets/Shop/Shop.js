@@ -12,7 +12,7 @@ const Shop = () => {
     const handleButtonEvent = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
-        const sameProduct = newCart.filter(pd => pd.key === product.key)
+        const sameProduct = newCart.filter(pd => pd.key === product.key);
         const count = sameProduct.length;
         addToDatabaseCart(product.key, count);
     }
