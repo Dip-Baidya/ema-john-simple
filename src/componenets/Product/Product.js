@@ -13,15 +13,15 @@ const Product = (props) => {
                 <img src={img} alt="" />
             </div>
             <div >
-                <h4 className='product-name'><Link to={"/product/"+key}>{name}</Link>
+                <h4 className='product-name'><Link to={"/product/" + key}>{name}</Link>
                 </h4>
                 <br />
                 <p><small>by: {seller}</small></p>
                 <p><small>${price}</small></p>
                 <br />
                 <p><small>only {stock} left in stock - Order soon</small></p>
-                <button className='main-button' onClick={() => props.handleButtonEvent(props.product)}>
-                    <FontAwesomeIcon icon={faShoppingCart} /> add to cart</button>
+                {props.showAddToCart === true && <button className='main-button' onClick={() => props.handleButtonEvent(props.product)}>
+                    <FontAwesomeIcon icon={faShoppingCart} /> add to cart</button>}
             </div>
         </div >
     );
