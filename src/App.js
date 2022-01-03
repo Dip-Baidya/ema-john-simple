@@ -11,6 +11,7 @@ import {
 import Inventory from './componenets/Inventory/Inventory';
 import NotFound from './componenets/NotFound/NotFound';
 import ProductDetail from './componenets/ProductDetail/ProductDetail';
+import Review from './componenets/Review/Review';
 //import {Switch} from 'react-router'
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/shop">
             <Shop></Shop>
+          </Route>
+          <Route path="/review">
+            <Review></Review>
           </Route>
           <Route path="/inventory">
             <Inventory></Inventory>
